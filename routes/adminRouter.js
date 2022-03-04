@@ -7,7 +7,7 @@ const user=require('../models/User',{ useNewUrlParser: true, useUnifiedTopology:
 
 
 adminRouter.delete('/deleteUser',async(req,res)=>{
-    console.log('request')
+    
     try {
         if(Object.keys(req.body).length!=0){
         const result=await user.findOneAndDelete({_id:req.body.id})
